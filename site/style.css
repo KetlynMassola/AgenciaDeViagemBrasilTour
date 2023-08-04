@@ -35,6 +35,10 @@
       margin-right: 50px;
     }
 
+    #media {
+        display: block;
+    }
+
     /* Estilo para o rodapé */
     .footer_content_container {
       background-color: #FAFFCC;
