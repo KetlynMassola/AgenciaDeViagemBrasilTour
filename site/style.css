@@ -31,12 +31,8 @@
     }
 
     .main-content .text-home {
-      width: 50%;
-      margin-right: 50px;
-    }
-
-    #media {
-        display: block;
+      width: 100%;
+      margin-right: 10px;
     }
 
     /* Estilo para o rodapé */
