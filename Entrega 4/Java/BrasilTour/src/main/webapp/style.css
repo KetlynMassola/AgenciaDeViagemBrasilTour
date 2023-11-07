@@ -1,0 +1,58 @@
+body {
+    background-color: #FAFFCC;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilo para a div que contém o menu */
+
+.menu-container {
+    background-color: black;
+    padding: 30px 0;
+}
+
+
+/* Estilo para os botões do menu */
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+
+/* Estilo para o logotipo */
+
+.logo {
+    width: 100%;
+    max-width: 400px;
+    /* Ajuste o valor para o tamanho desejado */
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content .text-home {
+    width: 100%;
+    margin-right: 10px;
+}
+
+
+/* Estilo para o rodapé */
+
+.footer_content_container {
+    background-color: #FAFFCC;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+/* Estilo para o texto do rodapé */
+
+.footer_content {
+    color: green;
+}
