@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulário de Contato - Agência de Viagem</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- Estilos personalizados -->
+	<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+	<div th:include="~{menu :: menu}"></div>
+
+	<div class="container" id="body">
+		<img th:src="@{/imagens/Brasiltour.jpg}" alt="BrasilTour" class="logo">
+		<div class="text-home">
+			<h1>Bem-vindo ao Brasil Tour!</h1>
+			<p>Explore a diversidade e a riqueza cultural do Brasil conosco. Seja você um viajante ávido ou alguém em
+				busca de uma experiência única, nosso site é o seu ponto de partida para descobrir os tesouros
+				escondidos deste país deslumbrante. Então,
+				embarque nesta aventura conosco. Desvende a magia do Brasil, deixe-se encantar por sua beleza
+				estonteante e apaixone-se por sua gente calorosa. O Brasil Tour é o seu portal para descobrir o melhor
+				que o Brasil tem a oferecer. Vamos juntos
+				nesta jornada extraordinária!</p>
+		</div>
+	</div>
+
+	<div class="footer_content_container">
+		<div class="footer_content">
+			<div class="contact">
+				<h1>Agência Brasil Tour</h1>
+				<p class="txt_md_white">contato@agenciabrasiltour.com</p>
+				<p class="txt_md_white">(+55) 67 950505050</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Adicionar o script do Bootstrap no final do body para habilitar funcionalidades -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

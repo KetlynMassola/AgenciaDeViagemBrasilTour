@@ -1,0 +1,47 @@
+<div th:fragment="menu">
+	<!-- Container do menu usando Bootstrap -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+			<a href="/" class="navbar-brand">BrasilTour</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarMenu">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="/destinos" class="nav-link">Destino</a></li>
+					<li class="nav-item"><a href="/promocoes" class="nav-link">Promoção</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Passageiro
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/passageiros">Listar</a></li>
+							<li><a class="dropdown-item" href="/passageiros/cadPassageiro">Cadastrar</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Pedido
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/pedidos">Listar</a></li>
+							<li><a class="dropdown-item" href="/pedidos/cadPedido">Cadastrar</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Passagem
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/passagens">Listar</a></li>
+							<li><a class="dropdown-item" href="/passagens/cadPassagem">Cadastrar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>

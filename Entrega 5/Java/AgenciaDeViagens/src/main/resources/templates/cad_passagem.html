@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de pedidos</title>
+	<!-- Incluindo o Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- Estilos personalizados -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+	<div th:include="menu :: menu"></div>
+
+	<div class="container">
+		<h1><strong>Brasiltour</strong></h1>
+		<p><strong>Cadastro de Passagem</strong></p>
+
+		<!-- Verifique se o param "alerta" existe na url -->
+		<div th:if="${alerta}">
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<span th:text="${alerta}"></span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		</div>
+
+		<div class="container main-content">
+			<form th:action="@{/passagens}" method="post">
+				<label for="origem" class="form-label"><strong>Origem:</strong></label>
+				<input type="text" id="origem" name="origem" required class="form-control"><br>
+
+				<label for="destino" class="form-label"><strong>Destino:</strong></label>
+				<input type="text" id="destino" name="destino" required class="form-control"><br>
+
+				<label for="data_ida" class="form-label"><strong>Data Ida:</strong></label>
+				<input type="text" id="dataIda" name="dataIda" required class="form-control"><br>
+
+				<label for="data_volta" class="form-label"><strong>Data Volta:</strong></label>
+				<input type="text" id="dataVolta" name="dataVolta" required class="form-control"><br>
+
+				<label for="num_pedido" class="form-label"><strong>Número do Pedido:</strong></label>
+				<input type="text" id="pedido" name="pedido" required class="form-control"><br>
+
+				<input type="submit" class="btn btn-primary" value="Enviar">
+			</form>
+		</div>
+	</div>
+	<!-- Adicionar o script do Bootstrap no final do body para habilitar funcionalidades -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

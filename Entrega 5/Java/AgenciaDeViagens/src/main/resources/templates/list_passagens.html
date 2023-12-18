@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de pedidos</title>
+	<!-- Incluindo o Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- Estilos personalizados -->
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+	<div th:include="menu :: menu"></div>
+
+	<div class="container">
+		<h1 class="text-center">Lista de pedidos</h1>
+
+		<!-- Verifique se o param "alerta" existe na url -->
+		<div th:if="${alerta}">
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<span th:text="${alerta}"></span>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		</div>
+
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th scope="col">Núm</th>
+					<th scope="col">Origem</th>
+					<th scope="col">Destino</th>
+					<th scope="col">Data Ida</th>
+					<th scope="col">Data Volta</th>
+					<th scope="col">Núm do Pedido</th>
+					<th scope="col">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="passagem : ${passagens}">
+					<td th:text="${passagem.numPassagem}"></td>
+					<td th:text="${passagem.origem}"></td>
+					<td th:text="${passagem.destino}"></td>
+					<td th:text="${passagem.dataIda}"></td>
+					<td th:text="${passagem.dataVolta}"></td>
+					<td th:text="${passagem.pedido.numPedido}"></td>
+					<td>
+						<form th:action="@{/passagens/deletar/{id} (id=${passagem.numPassagem}) }" method="post">
+							<button type="submit" class="btn btn-danger"
+								th:value="${passagem.numPassagem}">Excluir</button>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Adicionar o script do Bootstrap no final do body para habilitar funcionalidades -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
